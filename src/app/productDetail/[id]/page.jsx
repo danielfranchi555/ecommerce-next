@@ -1,12 +1,10 @@
 'use client'
-import loading from '@/app/loading'
 import { useGetProductByIdQuery } from '@/app/redux/services/getData'
-import connectDB from '@/utils/mongoose'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-const page = async ({ params }) => {
+const Page = async ({ params }) => {
 
     const id = params.id
     const { data, error, isLoading } = useGetProductByIdQuery(id)
@@ -41,4 +39,4 @@ const page = async ({ params }) => {
     )
 }
 
-export default page
+export default Page
